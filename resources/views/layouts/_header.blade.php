@@ -8,11 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
 
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    LaraBBS
-                </a>
             </button>
+            <!-- Branding Image -->
+            <a class="navbar-brand" href="{{ url('/') }}">
+                LaraBBS
+            </a>
         </div>
 
         <div class="collapse navbar-collapse" id="app-navbar-collapse">
