@@ -13,10 +13,10 @@
                        <div class="media-body">
                            <hr>
                            <h4><strong>个人简介</strong></h4>
-                           <p>要做一名优秀的工程师，更要做一个成功的CEO</p>
+                           <p>{{ $user->introduction }}</p>
                            <hr>
                            <h4><strong>注册于</strong></h4>
-                           <p>January 01 2005</p>
+                           <p>{{ $user->created_at->diffForHumans() }}</p>
                        </div>
                    </div>
                 </div>
