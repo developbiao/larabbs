@@ -8,7 +8,7 @@
                    <div class="media">
                        <div align="center">
 
-                           <img src="https://avatars3.githubusercontent.com/u/4484734?s=400&u=b0adef39dfa30025a21350c33e32d83ccadb947f&v=4" class="thumbnail img-responsive">
+                           <img src="{{ $user->avatar }}" width="300px" height="300px" class="thumbnail img-responsive">
                        </div>
                        <div class="media-body">
                            <hr>
