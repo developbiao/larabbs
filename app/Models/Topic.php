@@ -15,4 +15,32 @@ class Topic extends Model
     {
        return $this->belongsTo(User::class);
     }
+
+    public function scopeWithOrder($query, $order)
+    {
+        // different sort use different data logic
+        switch($order)
+        {
+            case 'recent':
+                $query = $this->recent();
+                break;
+            default:
+                $query = $this->recentReplied();
+        }
+        return $query->with('user', 'category');
+    }
+
+    public function scopeRecent($query)
+    {
+        return $query->orderBy('created_at', 'desc');
+    }
+
+    public function scopeRecentReplied($query)
+    {
+        // when topic trigger reply_count attribute
+        // framework automatic update updated_at timestamp
+       return $query->orderBy('updated_at', 'desc');
+    }
+
+
 }
