@@ -10,7 +10,7 @@
     <title>@yield('title', 'LaraBBS') - Laravel Skill </title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/app.css') }}?v=1.4" rel="stylesheet" />
 </head>
 
 <body>
