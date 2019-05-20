@@ -67,6 +67,15 @@
             $(document).ready(function(){
                 var editor = new Simditor({
                     textarea: $('#editor'),
+                    upload: {
+                        url: '{{ route('topics.upload_image') }}',
+                        params: { _token: '{{ csrf_token() }}' },
+                        fileKey: 'upload_file',
+                        connectionCount: 3,
+                        leaveConfirm: '文件上传中，关闭此页面取消上传。',
+                        pastImage: true,
+
+                    }
                 });
             });
         </script>
