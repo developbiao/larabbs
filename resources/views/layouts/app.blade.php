@@ -8,6 +8,7 @@
     <!-- CSRF token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'LaraBBS') - Laravel Skill </title>
+    <meta name="description" content="@yield('description', 'Laravel Learner')">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}?v=1.4" rel="stylesheet" />
