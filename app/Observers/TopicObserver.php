@@ -23,12 +23,16 @@ class TopicObserver
     public function saved(Topic $topic)
     {
         // if slug not exists use translate generate  title to slug
-        if( !$topic->slug )
-        {
+        if (!$topic->slug) {
             // push task to queue
             dispatch(new TranslateSlug($topic));
         }
 
+    }
+
+    public function deleted(Topic $topic)
+    {
+        \DB::table('replies')->where('topic_id', $topic->id)->delete();
     }
 
 
