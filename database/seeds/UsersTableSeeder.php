@@ -46,5 +46,11 @@ class UsersTableSeeder extends Seeder
         $user->email = 'java770520@163.com';
         $user->avatar = 'https://avatars2.githubusercontent.com/u/4484734?s=460&v=4';
         $user->save();
+        // initialization first user is founder
+        $user->assignRole('Founder');
+
+        // initialization second user is maintainer
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }
