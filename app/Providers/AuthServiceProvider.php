@@ -28,6 +28,9 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        \Horizon::auth(function ($request) {
+          // check if is founder can pass
+            return  \Auth::user()->hasRole('Founder');
+        });
     }
 }
