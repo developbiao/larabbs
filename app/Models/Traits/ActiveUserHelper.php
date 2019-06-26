@@ -34,7 +34,7 @@ trait ActiveUserHelper
         });
     }
 
-    public function calculateAdnCacheActiveUsers()
+    public function calculateAndCacheActiveUsers()
     {
         // get active user list
         $active_users = $this->calculateActiveUsers();
