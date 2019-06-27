@@ -18,8 +18,8 @@ trait ActiveUserHelper
     // configure information
     protected $topic_weight = 4; // topic weight
     protected $reply_weight = 1; // reply weight
-    protected $pass_days = 7;    // how many day pass
-    protected $user_number = 6;   // get how many users
+    protected $pass_days    = 7;    // how many day pass
+    protected $user_number  = 6;   // get how many users
 
     // about cache configuration
     protected $cache_key = 'larabbs_active_users';
