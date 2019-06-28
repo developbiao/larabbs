@@ -3,7 +3,7 @@
 use App\Models\User;
 
 return [
-    // 页面标题
+    // 页面标
     'title'   => '用户',
 
     // 模型单数，用作页面『新建 $single』

@@ -25,7 +25,7 @@ class SeedRolesAndPermissionsData extends Migration
         Permission::create(['name' => 'edit_settings']);
 
         // create website manager role, and assign permission for him
-        $founder = Role::create(['name' => 'founder']);
+        $founder = Role::create(['name' => 'Founder']);
         $founder->givePermissionTo('manage_contents');
         $founder->givePermissionTo('manage_users');
         $founder->givePermissionTo('edit_settings');
