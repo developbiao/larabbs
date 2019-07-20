@@ -15,6 +15,7 @@ class User extends Authenticatable
     }
 
     use Traits\ActiveUserHelper;
+    use Traits\LastActivedAtHelper;
 
     // *override trait notify function
     public function notify($instance)
