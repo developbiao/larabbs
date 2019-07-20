@@ -18,4 +18,13 @@ class UserObserver
     {
         //
     }
+
+    public function saving(User $user)
+    {
+        if(empty($user->avatar))
+        {
+            $user->avatar = 'https://avatars0.githubusercontent.com/u/6023444?s=400&v=4';
+        }
+
+    }
 }
