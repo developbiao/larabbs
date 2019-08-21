@@ -16,10 +16,10 @@ use Illuminate\Http\Request;
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
-   'namespace'  => 'App\Http\Controller\Api'
+   'namespace'  => 'App\Http\Controllers\Api'
 ], function ($api){
    // sms validate
-   $api->post('verificationCodes', 'VerificationController@store')
+   $api->post('verificationCodes', 'VerificationCodesController@store')
        ->name('api.verificationCodes.store');
 });
 
