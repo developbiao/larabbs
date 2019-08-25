@@ -21,5 +21,8 @@ $api->version('v1', [
    // sms validate
    $api->post('verificationCodes', 'VerificationCodesController@store')
        ->name('api.verificationCodes.store');
+   // user register
+    $api->post('users', 'UsersController@store')
+        ->name('api.users.store');
 });
 
