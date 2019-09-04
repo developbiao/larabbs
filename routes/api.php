@@ -30,6 +30,10 @@ $api->version('v1', [
         // user register
         $api->post('users', 'UsersController@store')
             ->name('api.users.store');
+
+        // captchas
+        $api->post('captchas', 'CaptchasController@store')
+            ->name('api.captchas.store');
     });
 });
 
