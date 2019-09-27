@@ -38,6 +38,10 @@ $api->version('v1', [
         // oauth login
         $api->post('socials/{social_type}/authorizations', 'AuthorizationsController@socialStore')
             ->name('api.socials.authorizations.store');
+
+        // general login
+        $api->post('authorizations', 'AuthorizationsController@store')
+            ->name('api.authorizations.store');
     });
 });
 
