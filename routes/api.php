@@ -42,6 +42,14 @@ $api->version('v1', [
         // general login
         $api->post('authorizations', 'AuthorizationsController@store')
             ->name('api.authorizations.store');
+
+        // refresh token
+        $api->put('authorizations', 'AuthorizationsController@update')
+            ->name('api.authorizations.update');
+
+        // delete token
+        $api->delete('authorizations', 'AuthorizationsController@destroy')
+            ->name('api.authorizations.destroy');
     });
 });
 
