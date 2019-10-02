@@ -16,7 +16,8 @@ use Illuminate\Http\Request;
 $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
-   'namespace'  => 'App\Http\Controllers\Api'
+   'namespace'  => 'App\Http\Controllers\Api',
+    'middleware' => ['serializer:array'],
 ], function ($api){
 
     $api->group([
@@ -50,6 +51,13 @@ $api->version('v1', [
         // delete token
         $api->delete('authorizations', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
+
+        // required token
+        $api->group(['middleware' => 'api.auth'], function ($api){
+           // current user information
+            $api->get('user', 'UsersController@me')
+                ->name('api.user.show');
+        });
     });
 });
 
