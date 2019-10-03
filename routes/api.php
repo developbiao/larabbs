@@ -52,11 +52,19 @@ $api->version('v1', [
         $api->delete('authorizations', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
 
-        // required token
+        // ---- required token -------
         $api->group(['middleware' => 'api.auth'], function ($api){
            // current user information
             $api->get('user', 'UsersController@me')
                 ->name('api.user.show');
+
+            // image resource
+            $api->post('images', 'ImagesController@store')
+                ->name('api.images.store');
+
+            // edit user information
+            $api->patch('user', 'UsersController@update')
+                ->name('api.user.update');
         });
     });
 });
